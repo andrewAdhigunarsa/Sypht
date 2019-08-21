@@ -9,7 +9,7 @@ import PieLoader from './pages/pie-loader/PieLoader';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div>
         <Header/>
         <Route exact path="/" component={Sypht}/>
         <Route path="/date-calculator" component={DateCalculator}/>
