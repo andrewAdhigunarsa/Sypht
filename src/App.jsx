@@ -11,9 +11,9 @@ function App() {
     <Router>
       <div>
         <Header/>
-        <Route exact path="/" component={Sypht}/>
-        <Route path="/date-calculator" component={DateCalculator}/>
-        <Route path="/pie-loader" component={PieLoader}/>
+        <Route exact={true} path="/Sypht/date-calculator" component={DateCalculator}/>
+        <Route exact={true} path="/Sypht/pie-loader" component={PieLoader}/>
+        <Route exact={true} path="/Sypht" component={Sypht}/>
       </div>
     </Router>
   );
