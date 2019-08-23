@@ -1,8 +1,12 @@
 import * as React from 'react';
+import styled from 'styled-components';
 
+const StyledDiv = styled.div `
+    padding:30px;
+`;
 class PieLoader extends React.Component{
     render(){
-        return (<span>PieLoader</span>);
+        return (<StyledDiv>PieLoader</StyledDiv>);
     }
 }
 
