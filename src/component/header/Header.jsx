@@ -40,9 +40,9 @@ export class header extends Component {
         return (
             <StyledNav className="sypth-navigation">
                 <StyleUl>
-                    <StyledLi><StyledLink to="/">Sypth</StyledLink></StyledLi>
-                    <StyledLi><StyledLink to="/date-calculator">Date calculator</StyledLink></StyledLi>
-                    <StyledLi><StyledLink to="/pie-loader">Pie Loader</StyledLink></StyledLi>
+                    <StyledLi><StyledLink to="/Sypht">Sypth</StyledLink></StyledLi>
+                    <StyledLi><StyledLink to="/Sypht/date-calculator">Date calculator</StyledLink></StyledLi>
+                    <StyledLi><StyledLink to="/Sypht/pie-loader">Pie Loader</StyledLink></StyledLi>
                 </StyleUl>
             </StyledNav>
         );
