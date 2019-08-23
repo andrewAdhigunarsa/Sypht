@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { BASE_URL, CALCULATOR_URL, PIE_LOADER_URL } from '../../App';
 
 const StyledNav = styled.nav`
     
@@ -40,9 +41,9 @@ export class header extends Component {
         return (
             <StyledNav className="sypth-navigation">
                 <StyleUl>
-                    <StyledLi><StyledLink to="/Sypht">Sypth</StyledLink></StyledLi>
-                    <StyledLi><StyledLink to="/Sypht/date-calculator">Date calculator</StyledLink></StyledLi>
-                    <StyledLi><StyledLink to="/Sypht/pie-loader">Pie Loader</StyledLink></StyledLi>
+                    <StyledLi><StyledLink to={BASE_URL}>Sypth</StyledLink></StyledLi>
+                    <StyledLi><StyledLink to={CALCULATOR_URL}>Date calculator</StyledLink></StyledLi>
+                    <StyledLi><StyledLink to={PIE_LOADER_URL}>Pie Loader</StyledLink></StyledLi>
                 </StyleUl>
             </StyledNav>
         );
