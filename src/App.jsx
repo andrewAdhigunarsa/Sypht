@@ -14,7 +14,7 @@ class App extends React.Component {
 
   async fetchToken(){
     try{
-        const URL = 'https://login.sypht.com/oauth/token';
+        const URL = 'https://login.sypht.com/oauth/token/';
         const body ={
           client_id: `${process.env.REACT_APP_SYPHT_CLIENT_ID}`,
           client_secret: `${process.env.REACT_APP_SYPHT_CLIENT_SECRET}`,
