@@ -27,9 +27,11 @@ class App extends React.Component {
           header:{
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin':'https://andrewadhigunarsa.github.io/Sypht'
+            'Access-Control-Allow-Origin':'https://andrewadhigunarsa.github.io/Sypht/'
           }
         };
+
+        console.log(options)
         const response = await fetch(URL, options);
 
         if(response){
