@@ -14,22 +14,19 @@ export const PIE_LOADER_URL =`${BASE_URL}/pie-loader`;
 class App extends React.Component {
 
   fetchToken(){
-        const response = Axios.post(
-          {
-            url:'https://login.sypht.com/oauth/token',
-            body:{
-              client_id: `${process.env.REACT_APP_SYPHT_CLIENT_ID}`,
-              client_secret: `${process.env.REACT_APP_SYPHT_CLIENT_SECRET}`,
-              audience: "https://api.sypht.com",
-              grant_type: "client_credentials"
-            },
-            headers:{
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-            json:true
-          }
-        );
+        const proxyURL = 'https://andrewadhigunarsa.github.io/Sypht';
+        const URL = 'https://login.sypht.com/oauth/token';
+        const body = {
+          client_id: `${process.env.REACT_APP_SYPHT_CLIENT_ID}`,
+          client_secret: `${process.env.REACT_APP_SYPHT_CLIENT_SECRET}`,
+          audience: "https://api.sypht.com",
+          grant_type: "client_credentials"
+        };
+        const header = {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        };
+        const response = Axios.post(proxyURL+URL, body, header);
         sessionStorage.setItem('syphtToken',JSON.stringify(response));
     }
 
