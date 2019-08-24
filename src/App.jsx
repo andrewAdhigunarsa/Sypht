@@ -22,8 +22,9 @@ class App extends React.Component {
           grant_type: "client_credentials"
         };
         const header = {
-          Accept: "application/json",
-          "Content-Type": "application/json"
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": null
         };
         const response = Axios.post(URL, body, header);
         sessionStorage.setItem('syphtToken',JSON.stringify(response));
