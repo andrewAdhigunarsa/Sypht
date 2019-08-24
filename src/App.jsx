@@ -26,9 +26,9 @@ class App extends React.Component {
           body: JSON.stringify(body),
           header: {
             Accept: "application/json",
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin":"https://login.sypht.com/oauth/token/"
-          }
+            "Content-Type": "application/json"
+          },
+          json: true
         };
 
         console.log(options)
