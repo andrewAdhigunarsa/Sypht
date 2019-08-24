@@ -27,7 +27,8 @@ class App extends React.Component {
           header: {
             "Accept": "application/json",
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*"
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Access, Authorization"
           },
           json: true
         };
@@ -35,7 +36,7 @@ class App extends React.Component {
         console.log(options)
         const response = await fetch(URL, options);
 
-        if(response){
+        if(response.status === 200){
             sessionStorage.setItem(
               "syphtToken",
               JSON.stringify(response)
