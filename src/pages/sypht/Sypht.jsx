@@ -10,6 +10,8 @@ const StyledH1 = styled.h1`
     background-color: red;
 `;
 class Sypht extends React.Component{
+
+   
     render(){
         return (
             <StyledDiv>

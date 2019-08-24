@@ -5,13 +5,30 @@ import Header from './component/header/Header';
 import Sypht from './pages/sypht/Sypht.jsx';
 import DateCalculator from './pages/date-calculator/DateCalculator.jsx';
 import PieLoader from './pages/pie-loader/PieLoader.jsx';
+import Axios from 'axios';
 
 export const BASE_URL = "/Sypht";
 export const CALCULATOR_URL = `${BASE_URL}/date-calculator`;
 export const PIE_LOADER_URL =`${BASE_URL}/pie-loader`;
 
-function App() {
-  return (
+class App extends React.Component {
+  
+  fetchToken(){
+        const URL = 'https://login.sypht.com/oauth/token';
+        const body ={
+          client_id:`${process.env.REACT_APP_SYPHT_CLIENT_ID}`,
+          client_secret:`${process.env.REACT_APP_SYPHT_CLIENT_SECRET}`
+        }
+        const response = Axios.post(URL,body);
+        sessionStorage.setItem('syphtToken',JSON.stringify(response));
+    }
+
+  componentDidMount(){
+    this.fetchToken()
+  }
+
+  render(){
+    return (
     <Router>
       <div>
         <Header/>
@@ -21,6 +38,7 @@ function App() {
       </div>
     </Router>
   );
+  }
 }
    
 export default App;
