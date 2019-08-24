@@ -22,12 +22,12 @@ class App extends React.Component {
           grant_type: "client_credentials"
         }
         const options = {
-          method:'POST',
+          method: "POST",
           body: JSON.stringify(body),
-          header:{
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin':'https://andrewadhigunarsa.github.io/Sypht/'
+          header: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin":"https://login.sypht.com/oauth/token/"
           }
         };
 
