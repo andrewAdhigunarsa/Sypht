@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import FileUploader from './file-uploader/FileUploader';
 
 const StyledDiv = styled.div`
     padding:30px;
@@ -16,9 +17,7 @@ class Sypht extends React.Component{
         return (
             <StyledDiv>
                 <StyledH1>Sypht</StyledH1>
-                <p>
-                    This is the Main page
-                </p>
+                <FileUploader/>
 
             </StyledDiv>
             
