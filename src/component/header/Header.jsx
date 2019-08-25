@@ -12,6 +12,7 @@ const StyledNav = styled.nav`
 const StyleUl = styled.ul`
     padding:0;
     box-sizing: border-box;
+    display:flex;
 `;
 
 const StyledLi = styled.li`
@@ -21,19 +22,28 @@ const StyledLi = styled.li`
 `;
 
 const StyledLink = styled(Link)`
-    box-sizing: border-box;
-    color: lightgrey;
-    font-size: 34px;
-    line-height:40px;
-     padding: 30px;
-    font-family: helvetica;
-    text-decoration: none;
-    transition:.2s ease-in;
-    :hover{
-        color:grey;
-        font-size: 40px;
-        line-height: 40px;
+  box-sizing: border-box;
+  color: lightgrey;
+  font-size: 34px;
+  line-height: 40px;
+  padding: 30px;
+  font-family: helvetica;
+  text-decoration: none;
+  transition: 0.2s ease-in;
+  :hover {
+    color: grey;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  @media only screen and (max-width: 600px) {
+      padding:15px;
+    font-size: 14px;
+    line-height: 20px;
+    :hover {
+      font-size: 20px;
+      line-height: 20px;
     }
+  }
 `;
 
 export class header extends Component {
