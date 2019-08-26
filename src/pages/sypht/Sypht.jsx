@@ -8,7 +8,6 @@ const StyledDiv = styled.div`
 
 const StyledH1 = styled.h1`
     margin-top:0;
-    background-color: red;
 `;
 class Sypht extends React.Component{
 

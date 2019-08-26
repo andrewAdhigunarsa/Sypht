@@ -5,6 +5,7 @@ import Header from './component/header/Header';
 import Sypht from './pages/sypht/Sypht.jsx';
 import DateCalculator from './pages/date-calculator/DateCalculator.jsx';
 import PieLoader from './pages/pie-loader/PieLoader.jsx';
+import Axios from 'axios';
 
 export const BASE_URL = "/Sypht";
 export const CALCULATOR_URL = `${BASE_URL}/date-calculator`;
@@ -13,43 +14,29 @@ export const PIE_LOADER_URL =`${BASE_URL}/pie-loader`;
 class App extends React.Component {
 
   async fetchToken(){
-    try{
-        const URL = 'https://login.sypht.com/oauth/token/';
-        const body ={
-          client_id: `${process.env.REACT_APP_SYPHT_CLIENT_ID}`,
-          client_secret: `${process.env.REACT_APP_SYPHT_CLIENT_SECRET}`,
-          audience: "https://api.sypht.com",
-          grant_type: "client_credentials"
-        }
-        const options = {
-          method: "POST",
-          body: JSON.stringify(body),
-          header: {
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Access, Authorization"
-          },
-          json: true
-        };
+      try{
+          const config = {
+            method: "get",
+            url: "http://localhost:3003/token",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json"
+            }
+          };
+          const response = await Axios(config);
 
-        console.log(options)
-        const response = await fetch(URL, options);
+          if(response.status === 200){
+              sessionStorage.setItem(
+                "syphtToken",
+                JSON.stringify(response.data)
+              );
+          }else{
+            console.log(response.status);
+          }
 
-        if(response.status === 200){
-            sessionStorage.setItem(
-              "syphtToken",
-              JSON.stringify(response)
-            );
-        }else{
-          console.log(response);
-        }
-
-    }catch(e){
-      console.log(e)
-    }
-        
-        
+      }catch(e){
+        console.log(e)
+      }
     }
 
   componentDidMount(){

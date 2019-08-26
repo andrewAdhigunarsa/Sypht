@@ -7,6 +7,7 @@ const StyledNav = styled.nav`
     
     margin:0;
     box-sizing: border-box;
+    border-bottom:1px solid lightgrey;
 `;
 
 const StyleUl = styled.ul`
