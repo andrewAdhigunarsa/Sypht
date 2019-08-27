@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Sypht/static/css/main.abed8669.chunk.css",
+    "main.js": "/Sypht/static/js/main.0e25fd30.chunk.js",
+    "main.js.map": "/Sypht/static/js/main.0e25fd30.chunk.js.map",
+    "runtime~main.js": "/Sypht/static/js/runtime~main.48aef412.js",
+    "runtime~main.js.map": "/Sypht/static/js/runtime~main.48aef412.js.map",
+    "static/js/2.1153b1ef.chunk.js": "/Sypht/static/js/2.1153b1ef.chunk.js",
+    "static/js/2.1153b1ef.chunk.js.map": "/Sypht/static/js/2.1153b1ef.chunk.js.map",
+    "index.html": "/Sypht/index.html",
+    "precache-manifest.aef1acc2a1732ed00a64ce227e782f27.js": "/Sypht/precache-manifest.aef1acc2a1732ed00a64ce227e782f27.js",
+    "service-worker.js": "/Sypht/service-worker.js",
+    "static/css/main.abed8669.chunk.css.map": "/Sypht/static/css/main.abed8669.chunk.css.map"
+  }
+}
