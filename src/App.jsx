@@ -16,7 +16,7 @@ class App extends React.Component {
   async fetchToken(){
       try{
           const config = {
-            method: "get",
+            method: "post",
             url: "http://localhost:3003/token",
             headers: {
               Accept: "application/json",
